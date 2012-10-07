@@ -1,0 +1,263 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+
+body {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column;
+	flex-flow: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	background: #cedce7;
+  background: -moz-linear-gradient(top,  hsla(206,34%,86%,1) 0%, hsla(199,12%,60%,1) 100%);
+  background: -webkit-linear-gradient(top,  hsla(206,34%,86%,1) 0%,hsla(199,12%,60%,1) 100%);
+  background: -o-linear-gradient(top,  hsla(206,34%,86%,1) 0%,hsla(199,12%,60%,1) 100%);
+  background: -ms-linear-gradient(top,  hsla(206,34%,86%,1) 0%,hsla(199,12%,60%,1) 100%);
+  background: linear-gradient(to bottom,  hsla(206,34%,86%,1) 0%,hsla(199,12%,60%,1) 100%);	
+  font: 1.25em "Comic Sans MS", san-serif;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.title {
+	font-size: 2.2em;
+	text-shadow: 2px 2px 3px gray;
+}
+
+.title,
+.message {
+	white-space: nowrap;
+}
+
+img {
+	margin: 25px;
+  border-radius: 150px;
+  z-index: -1;
+}
+
+.buttons {
+	margin: 20px;
+	display: -webkit-flex;
+	display: flex;
+	width: 400px;
+	height: 50px; 
+	background: black;
+	border-radius: 20px;
+	box-shadow: 2px 2px 3px 1px gray;
+}
+
+.button {
+  -webkit-flex: 1;
+  flex: 1;
+  box-shadow: inset 0 0 2px 1px gray, 2px 2px 2px 0px gray;  
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  outline: none;
+}
+
+.button:hover {
+  box-shadow: 0 0 3px 1px #ccc, inset 0 0 2px 1px gray, 2px 2px 2px 0px gray;
+}
+
+/* This really bothers me.  Closure is missing the click when I have an :active rule. */
+/*
+.button:active {
+  -webkit-transform: translateZ(-8px);
+  transform: translateZ(-8px);
+}
+*/
+
+.button {
+  background-image: -moz-linear-gradient(top,  hsla(0,0%,100%,0.7) 0%, hsla(0,0%,100%,0) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,hsla(0,0%,100%,0.7)), color-stop(100%,hsla(0,0%,100%,0)));
+  background-image: -webkit-linear-gradient(top,  hsla(0,0%,100%,0.7) 0%,hsla(0,0%,100%,0) 100%);
+  background-image: -o-linear-gradient(top,  hsla(0,0%,100%,0.7) 0%,hsla(0,0%,100%,0) 100%);
+  background-image: -ms-linear-gradient(top,  hsla(0,0%,100%,0.7) 0%,hsla(0,0%,100%,0) 100%);
+  background-image: linear-gradient(to bottom,  hsla(0,0%,100%,0.7) 0%,hsla(0,0%,100%,0) 100%);
+  border: 2px solid #333;
+  color: white;
+  text-shadow: 2px 2px 5px gray;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.reset {
+	background-color: #008;
+}
+
+.decrement {
+  background-color: #800;
+	border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.increment {
+  background-color: #080;
+	border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.no-cups .decrement {
+	display: none;
+}
+
+.no-cups .reset {
+  display: none;
+}
+
+.no-cups .increment {
+	border-radius: 20px;
+}
+
+.no-cups img {
+  -webkit-filter: sepia(50%) blur(3px);
+  filter: sepia(50%) blur(3px);
+  -webkit-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+
+.two-cups {
+	-webkit-animation: spin 3s linear infinite;
+	animation: spin 3s linear infinite;
+}
+
+.three-cups {
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+.four-cups {
+  -webkit-animation: spin 200ms linear infinite;
+  animation: spin 200ms linear infinite;
+}
+
+.many-cups {
+	-webkit-animation: wacky 1s linear infinite;
+	animation: wacky 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+	from {
+	  -webkit-transform: rotate(0);
+	  transform: rotate(0);
+	}
+	to {
+	  -webkit-transform: rotate(360deg);
+	  transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes wacky {
+	0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+	}
+  10% {
+    -webkit-transform: rotate(180deg) translate(100px, 100px);
+    transform: rotate(180deg) translate(100px, 100px);
+  }
+  20% {
+    -webkit-transform: rotate(0deg) translate(-100px, 100px);
+    transform: rotate(0deg) translate(-100px, 100px);
+  }
+  30% {
+    -webkit-transform: rotate(180deg) translate(-100px, -100px);
+    transform: rotate(180deg) translate(-100px, -100px);
+  }
+  40% {
+    -webkit-transform: rotate(0deg) translate(100px, -100px);
+    transform: rotate(0deg) translate(100px, -100px);
+  }
+  50% {
+    -webkit-transform: rotate(180deg) translate(100px, 100px);
+    transform: rotate(180deg) translate(100px, 100px);
+  }
+  60% {
+    -webkit-transform: rotate(0deg) translate(-200px,200px);
+    transform: rotate(0deg) translate(-200px,200px);
+  }
+  70% {
+    -webkit-transform: rotate(180deg) translate(-200px, -200px);
+    transform: rotate(180deg) translate(-200px, -200px);
+  }
+  80% {
+    -webkit-transform: rotate(0deg) translate(200px, -200px);
+    transform: rotate(0deg) translate(200px, -200px);
+  }
+  90% {
+    -webkit-transform: rotate(1800deg) translate(200px, 200px);
+    transform: rotate(1800deg) translate(200px, 200px);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    }
+}
+
+@keyframes wacky {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  10% {
+    -webkit-transform: rotate(180deg) translate(100px, 100px);
+    transform: rotate(180deg) translate(100px, 100px);
+  }
+  20% {
+    -webkit-transform: rotate(0deg) translate(-100px, 100px);
+    transform: rotate(0deg) translate(-100px, 100px);
+  }
+  30% {
+    -webkit-transform: rotate(180deg) translate(-100px, -100px);
+    transform: rotate(180deg) translate(-100px, -100px);
+  }
+  40% {
+    -webkit-transform: rotate(0deg) translate(100px, -100px);
+    transform: rotate(0deg) translate(100px, -100px);
+  }
+  50% {
+    -webkit-transform: rotate(180deg) translate(100px, 100px);
+    transform: rotate(180deg) translate(100px, 100px);
+  }
+  60% {
+    -webkit-transform: rotate(0deg) translate(-200px,200px);
+    transform: rotate(0deg) translate(-200px,200px);
+  }
+  70% {
+    -webkit-transform: rotate(180deg) translate(-200px, -200px);
+    transform: rotate(180deg) translate(-200px, -200px);
+  }
+  80% {
+    -webkit-transform: rotate(0deg) translate(200px, -200px);
+    transform: rotate(0deg) translate(200px, -200px);
+  }
+  90% {
+    -webkit-transform: rotate(1800deg) translate(200px, 200px);
+    transform: rotate(1800deg) translate(200px, 200px);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Coffee</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/coffee.css" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <script type="text/javascript" src="../../../closure/closure-library/closure/goog/base.js"></script>
+    <script type="text/javascript">
+      goog.require('goog.events');
+      goog.require('goog.events.EventTarget');
+      goog.require('goog.debug.Logger');
+    </script>
+    <!-- Initially select the files to include using a direct method. -->
+    <!--     
+    <script type="text/javascript" src="js/coffee_controller.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+     -->
+     
+    <!-- Later (after setting up the deps.js file, use goog.require statements. -->
+    <script type="text/javascript" src="build/deps.js"></script>
+    <script type="text/javascript">
+      goog.require('coffee.Main');
+    </script>
+  </head>
+  <body class="no-cups">
+    <div class="title">Coffee counter</div>
+    <img class="no-cups" src="images/cup_of_coffee.JPG" alt="Cup of coffee">
+    <div class="message">You've had 0 cups of coffee today.</div>
+    <div class="buttons">
+      <div class="button decrement">-1</div>
+      <div class="button reset">Reset</div>
+      <div class="button increment">+1</div>
+    </div>
+  </body>
+</html>
