@@ -20,8 +20,6 @@ body {
   background: -ms-linear-gradient(top,  hsla(206,34%,86%,1) 0%,hsla(199,12%,60%,1) 100%);
   background: linear-gradient(to bottom,  hsla(206,34%,86%,1) 0%,hsla(199,12%,60%,1) 100%);	
   font: 1.25em "Comic Sans MS", san-serif;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
 }
 
 .title {
@@ -49,6 +47,7 @@ img {
 	background: black;
 	border-radius: 20px;
 	box-shadow: 2px 2px 3px 1px gray;
+	cursor: pointer;
 }
 
 .button {
@@ -68,13 +67,12 @@ img {
   box-shadow: 0 0 3px 1px #ccc, inset 0 0 2px 1px gray, 2px 2px 2px 0px gray;
 }
 
-/* This really bothers me.  Closure is missing the click when I have an :active rule. */
-/*
 .button:active {
-  -webkit-transform: translateZ(-8px);
-  transform: translateZ(-8px);
+  -webkit-transform: translate(0, 2px);
+  transform: translate(0, 2px);
+  margin-bottom: 1px;
 }
-*/
+
 
 .button {
   background-image: -moz-linear-gradient(top,  hsla(0,0%,100%,0.7) 0%, hsla(0,0%,100%,0) 100%);
