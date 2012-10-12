@@ -5,7 +5,7 @@
  * @author fisherds@gmail.com (Dave Fisher)
  */
 
-goog.provide('coffee.Main');
+goog.provide('coffee.main');
 
 goog.require('goog.debug.Console');
 goog.require('goog.debug.LogManager');
