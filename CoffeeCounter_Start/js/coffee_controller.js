@@ -9,10 +9,9 @@ goog.provide('coffee.CoffeeController');
 
 goog.require('goog.debug.Logger');
 goog.require('goog.dom');
-goog.require('goog.dom.classes');
 goog.require('goog.events');
+goog.require('goog.events.EventHandler');
 goog.require('goog.events.EventTarget');
-goog.require('goog.ui.Control');
 
 
 

@@ -131,7 +131,7 @@ coffee.CoffeeController.prototype.handleButtonPress_ = function(e) {
 
 
 /**
- * Updates the light states.
+ * Updates the view state.
  * @private
  */
 coffee.CoffeeController.prototype.updateView_ = function() {
