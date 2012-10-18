@@ -109,7 +109,7 @@ coffee.CoffeeController.prototype.init_ = function() {
 
 
 /**
- * Handles a click on a light.
+ * Handles a click on a button.
  * @param {goog.events.Event} e Click event.
  * @private
  */
